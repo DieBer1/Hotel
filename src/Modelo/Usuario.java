@@ -11,24 +11,17 @@ package Modelo;
  */
 public class Usuario 
 {
-    int idUser, edad;
-    String nomb;
+    int  edad;
+    String nomb, id, identificacion;
 
     public Usuario() {
     }
 
-    public Usuario(int idUser, int edad, String nomb) {
-        this.idUser = idUser;
+    public Usuario(int edad, String nomb, String id, String identificacion) {
         this.edad = edad;
         this.nomb = nomb;
-    }
-
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+        this.id = id;
+        this.identificacion = identificacion;
     }
 
     public int getEdad() {
@@ -47,9 +40,25 @@ public class Usuario
         this.nomb = nomb;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+    
     @Override
     public String toString() {
-        return "Usuario{" + "idUser=" + idUser + ", edad=" + edad + ", nomb=" + nomb + '}';
+        return "Usuario{" + "idUser=" + id + ", edad=" + edad + ", nomb=" + nomb + '}';
     }
     
     public Boolean calcularEdad()
